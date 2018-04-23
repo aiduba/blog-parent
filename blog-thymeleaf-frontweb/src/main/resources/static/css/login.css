@@ -1,0 +1,23 @@
+/* 注册页面 */
+.btn-blue{height:40px;line-height:40px;padding:0;border:none;background-color: #66b7ff;color: #fff !important;}
+.btn-blue:hover{background-color: #4DAAFF;}
+.btn-blue:active{background-color: #339DFF;}
+.aw-login-box{width: 714px;height: auto;margin:0px auto 40px;padding:50px 0;background:#fff;/*border:1px solid #b3b3b3;*/border-radius: 3px;text-align: center;}
+.aw-login-box h1{margin:0px 0 0;font-size: 20px;color: #666666;}
+.aw-login-box .mod-body{width: 390px;margin:0 auto;padding:40px 40px 5px 40px;}
+.aw-login-box ul li{position:relative;line-height:30px;margin-bottom: 20px;}
+.aw-login-box ul li input[type="text"], .aw-login-box ul li input[type="password"]{width:100%;height: 40px;line-height: 28px\0;padding-left:15px !important;box-shadow: none;border-color: #e6e6e6;}
+.aw-login-box ul li.last{text-align: left;color:#666;}
+.aw-login-box ul li hr{margin:30px 0;}
+
+/* iphone横屏幕 */
+@media (max-width:640px){
+    /*注册界面*/
+    .aw-login-box .mod-body{width:100%;padding:10px;}
+    .aw-login-box, .aw-login-box ul li{width: auto;}
+}
+@media (max-width:321px){
+    .aw-login-box{width: 270px !important;}
+    .aw-regiter-agreement{width: 240px;margin:10px 0 0;}
+}
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.blog.common.mapper.PowerListMapper" >
+  <resultMap id="BaseResultMap" type="com.blog.common.entity.PowerList" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="p_id" property="pId" jdbcType="INTEGER" />
+    <result column="power_id" property="powerId" jdbcType="INTEGER" />
+    <result column="power_name" property="powerName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

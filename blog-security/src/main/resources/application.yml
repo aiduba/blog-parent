@@ -1,0 +1,25 @@
+server:
+  port: 8001
+battcn:
+  security:
+    token:
+      expiration-time: 10 # 分钟 1440
+      refresh-exp-time: 30 # 分钟 2880
+      issuer: http://blog.battcn.com
+      signing-key: battcn
+logging:
+  level:
+    com.netflix: DEBUG
+    com.battcn: DEBUG
+spring:
+  application:
+    name: blog-security
+  datasource:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost/master_blog
+      username: root
+      password: 123456
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/blog-common/blog-common.iml" filepath="$PROJECT_DIR$/blog-common/blog-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/blog-eureka-server/blog-eureka-server.iml" filepath="$PROJECT_DIR$/blog-eureka-server/blog-eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/blog-security/blog-security.iml" filepath="$PROJECT_DIR$/blog-security/blog-security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/blog-thymeleaf-frontweb/blog-thymeleaf-frontweb.iml" filepath="$PROJECT_DIR$/blog-thymeleaf-frontweb/blog-thymeleaf-frontweb.iml" />
+    </modules>
+  </component>
+</project>

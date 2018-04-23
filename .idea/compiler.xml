@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="blog-common" />
+        <module name="blog-eureka" />
+        <module name="blog-eureka-server" />
+        <module name="blog-frontweb-thymeleaf" />
+        <module name="blog-security" />
+        <module name="blog-user-server" />
+        <module name="blog-user-service" />
+        <module name="blog-web" />
+        <module name="blog-web-thymeleaf" />
+        <module name="blogcommon2" />
+        <module name="eureka-blog" />
+        <module name="eureka-blog-web" />
+        <module name="eureka-server-blog" />
+        <module name="eureka-thymeleaf-blog-web" />
+      </profile>
+      <profile name="Annotation profile for blog-user-server" enabled="true">
+        <sourceOutputDir name="../blog-user-server/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../blog-user-server/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="eureka-security-blog" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="blog-common" target="1.5" />
+      <module name="blog-eureka-server" target="1.6" />
+      <module name="blog-security" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

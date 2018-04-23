@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>爱杜吧 | 注册</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../../static/bootstrap-3.3.7/dist/css/bootstrap.min.css" th:href="@{/bootstrap-3.3.7/dist/css/bootstrap.min.css}" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../static/bootstrap-3.3.7/docs/assets/css/ie10-viewport-bug-workaround.css" th:href="@{/bootstrap-3.3.7/docs/assets/css/ie10-viewport-bug-workaround.css}" rel="stylesheet">
+
+    <!-- register.css -->
+    <link href="../../static/css/register.css" th:href="@{/css/register.css}" rel="stylesheet">
+    <!-- register.css -->
+    <link href="../../static/css/common.css" th:href="@{/css/common.css}" rel="stylesheet">
+
+    <script src="../../static/bootstrap-3.3.7/js/tests/vendor/jquery.min.js" th:href="@{/bootstrap-3.3.7/js/tests/vendor/jquery.min.js}"></script>
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]>
+    <script src="../../static/bootstrap-3.3.7/docs/assets/js/ie8-responsive-file-warning.js" th:href="@{/bootstrap-3.3.7/docs/assets/js/ie8-responsive-file-warning.js}"></script><![endif]-->
+    <script src="../../static/bootstrap-3.3.7/docs/assets/js/ie-emulation-modes-warning.js" th:href="@{/bootstrap-3.3.7/docs/assets/js/ie-emulation-modes-warning.js}"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js" th:href="@{https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js}"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js" th:href="@{https://oss.maxcdn.com/respond/1.4.2/respond.min.js}"></script>
+    <![endif]-->
+
+    <!--<script type="text/javascript">
+        var G_BASE_URL = 'http://wenda.bootcss.com';
+    </script>-->
+</head>
+<body>
+<div class="aw-register-box">
+    <div class="mod-head">
+        <img class="mb-4" src="../../static/image/logo.jpg" alt="" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">Aidu</h1>
+    </div>
+    <div class="mod-body">
+        <form class="form-signin" action="" method="post" id="register_form">
+            <ul>
+                <li>
+                    <input class="aw-register-name form-control" type="text" name="user_name" placeholder="用户名"
+                           value="">
+                </li>
+                <li>
+                    <input class="aw-register-email form-control" type="text" placeholder="邮箱" name="email" value="">
+                </li>
+                <li>
+                    <input class="aw-register-pwd form-control" type="password" name="password" placeholder="密码">
+                </li>
+                <li class="aw-register-verify">
+                    <img class="pull-right" id="captcha"
+                         onclick="this.src = G_BASE_URL + '/account/captcha/' + Math.floor(Math.random() * 10000);"
+                         src="http://wenda.bootcss.com/account/captcha/">
+
+                    <input type="text" class="form-control" name="seccode_verify" placeholder="验证码">
+                </li>
+                <li class="last">
+                    <label><input type="checkbox" checked="checked" value="agree" name="agreement_chk"> 我同意</label> <a
+                        href="javascript:;" class="aw-agreement-btn">用户协议</a>
+                    <a href="" class="pull-right">已有账号?</a>
+                    <div class="aw-regiter-agreement hide">
+                        <div class="aw-register-agreement-txt" id="register_agreement">当您申请用户时，表示您已经同意遵守本规章。<br>
+                            欢迎您加入本站点参与交流和讨论，本站点为社区，为维护网上公共秩序和社会稳定，请您自觉遵守以下条款：<br>
+                            <br>
+                            一、不得利用本站危害国家安全、泄露国家秘密，不得侵犯国家社会集体的和公民的合法权益，不得利用本站制作、复制和传播下列信息：<br>
+                            　（一）煽动抗拒、破坏宪法和法律、行政法规实施的；<br>
+                            　（二）煽动颠覆国家政权，推翻社会主义制度的；<br>
+                            　（三）煽动分裂国家、破坏国家统一的；<br>
+                            　（四）煽动民族仇恨、民族歧视，破坏民族团结的；<br>
+                            　（五）捏造或者歪曲事实，散布谣言，扰乱社会秩序的；<br>
+                            　（六）宣扬封建迷信、淫秽、色情、赌博、暴力、凶杀、恐怖、教唆犯罪的；<br>
+                            　（七）公然侮辱他人或者捏造事实诽谤他人的，或者进行其他恶意攻击的；<br>
+                            　（八）损害国家机关信誉的；<br>
+                            　（九）其他违反宪法和法律行政法规的；<br>
+                            　（十）进行商业广告行为的。<br>
+                            <br>
+                            二、互相尊重，对自己的言论和行为负责。<br>
+                            三、禁止在申请用户时使用相关本站的词汇，或是带有侮辱、毁谤、造谣类的或是有其含义的各种语言进行注册用户，否则我们会将其删除。<br>
+                            四、禁止以任何方式对本站进行各种破坏行为。<br>
+                            五、如果您有违反国家相关法律法规的行为，本站概不负责，您的登录信息均被记录无疑，必要时，我们会向相关的国家管理部门提供此类信息。
+                        </div>
+                    </div>
+
+                </li>
+                <li>
+                    <button class="btn btn-large btn-blue btn-block">注册</button>
+                </li>
+            </ul>
+        </form>
+    </div>
+    <div class="mod-footer">
+        <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        /*$.get(G_BASE_URL + '/account/ajax/register_agreement/', function (result) {
+            console.log(result);
+            // $('#register_agreement').html(result.err);
+        }, 'json');*/
+
+        $('.aw-agreement-btn').click(function () {
+            if ($('.aw-regiter-agreement').is(':visible')) {
+                $('.aw-regiter-agreement').hide();
+            }
+            else {
+                $('.aw-regiter-agreement').show();
+            }
+        });
+
+        // verify_register_form('#register_form');
+
+        /* 注册页面验证 */
+        function verify_register_form(element) {
+            $(element).find('[type=text], [type=password]').on({
+                focus: function () {
+                    if (typeof $(this).attr('tips') != 'undefined' && $(this).attr('tips') != '') {
+                        $(this).parent().append('<span class="aw-reg-tips">' + $(this).attr('tips') + '</span>');
+                    }
+                },
+                blur: function () {
+                    if ($(this).attr('tips') != '') {
+                        switch ($(this).attr('name')) {
+                            case 'user_name' :
+                                var _this = $(this);
+                                $(this).parent().find('.aw-reg-tips').detach();
+                                if ($(this).val().length >= 0 && $(this).val().length < 2) {
+                                    $(this).parent().find('.aw-reg-tips').detach();
+                                    $(this).parent().append('<span class="aw-reg-tips aw-reg-err"><i class="aw-icon i-err"></i>' + $(this).attr('errortips') + '</span>');
+                                    return;
+                                }
+                                if ($(this).val().length > 17) {
+                                    $(this).parent().find('.aw-reg-tips').detach();
+                                    $(this).parent().append('<span class="aw-reg-tips aw-reg-err"><i class="aw-icon i-err"></i>' + $(this).attr('errortips') + '</span>');
+                                    return;
+                                }
+                                else {
+                                    $.get(G_BASE_URL + '/account/ajax/check_username/username' + '-' + encodeURIComponent($(this).val()), function (result) {
+                                        if (result.errno == -1) {
+                                            _this.parent().find('.aw-reg-tips').detach();
+                                            _this.parent().append('<span class="aw-reg-tips aw-reg-err"><i class="aw-icon i-err"></i>' + result.err + '</span>');
+                                        }
+                                        else {
+                                            _this.parent().find('.aw-reg-tips').detach();
+                                            _this.parent().append('<span class="aw-reg-tips aw-reg-right"><i class="aw-icon i-followed"></i></span>');
+                                        }
+                                    }, 'json');
+                                }
+                                return;
+
+                            case 'email' :
+                                $(this).parent().find('.aw-reg-tips').detach();
+                                var emailreg = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;
+                                if (!emailreg.test($(this).val())) {
+                                    $(this).parent().find('.aw-reg-tips').detach();
+                                    $(this).parent().append('<span class="aw-reg-tips aw-reg-err"><i class="aw-icon i-err"></i>' + $(this).attr('errortips') + '</span>');
+                                    return;
+                                }
+                                else {
+                                    $(this).parent().find('.aw-reg-tips').detach();
+                                    $(this).parent().append('<span class="aw-reg-tips aw-reg-right"><i class="aw-icon i-followed"></i></span>');
+                                }
+                                return;
+
+                            case 'password' :
+                                $(this).parent().find('.aw-reg-tips').detach();
+                                if ($(this).val().length >= 0 && $(this).val().length < 6) {
+                                    $(this).parent().find('.aw-reg-tips').detach();
+                                    $(this).parent().append('<span class="aw-reg-tips aw-reg-err"><i class="aw-icon i-err"></i>' + $(this).attr('errortips') + '</span>');
+                                    return;
+                                }
+                                if ($(this).val().length > 17) {
+                                    $(this).parent().find('.aw-reg-tips').detach();
+                                    $(this).parent().append('<span class="aw-reg-tips aw-reg-err"><i class="aw-icon i-err"></i>' + $(this).attr('errortips') + '</span>');
+                                    return;
+                                }
+                                else {
+                                    $(this).parent().find('.aw-reg-tips').detach();
+                                    $(this).parent().append('<span class="aw-reg-tips aw-reg-right"><i class="aw-icon i-followed"></i></span>');
+                                }
+                                return;
+
+                        }
+                    }
+
+                }
+            });
+        }
+    });
+</script>
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../../static/bootstrap-3.3.7/docs/assets/js/ie10-viewport-bug-workaround.js" th:href="@{/bootstrap-3.3.7/docs/assets/js/ie10-viewport-bug-workaround.js}"></script>
+</body>
+</html>

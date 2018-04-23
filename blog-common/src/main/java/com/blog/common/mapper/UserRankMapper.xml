@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.blog.common.mapper.UserRankMapper" >
+  <resultMap id="BaseResultMap" type="com.blog.common.entity.UserRank" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="rank_id" property="rankId" jdbcType="INTEGER" />
+    <result column="user_rank_id" property="userRankId" jdbcType="SMALLINT" />
+    <result column="rank_mark" property="rankMark" jdbcType="INTEGER" />
+    <result column="rank_name" property="rankName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>
